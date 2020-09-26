@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MDSIface>
+  <Hansen>
+    <Hansen_URL>www.yahoo.com</Hansen_URL>
+    <Hansen_Provider>pysb</Hansen_Provider>
+    <Hansen_UserName>kellyj</Hansen_UserName>
+    <Hansen_Password>thepassword</Hansen_Password>
+    <Hansen_LogPath>C:/temp/ips2sl_log.xml</Hansen_LogPath>
+    <Stop_File>C:/temp/stop.txt</Stop_File>
+    <StartProcessDate>4-29-2019</StartProcessDate>
+    <SRErrorLogType>SLIfaceErr</SRErrorLogType>
+    <WOErrorLogType>SLIfaceErr</WOErrorLogType>
+    <SessionTimeOut>2</SessionTimeOut>
+    <SleepTime>10</SleepTime>
+  </Hansen>
+</MDSIface>
+
+
