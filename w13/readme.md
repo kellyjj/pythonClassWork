@@ -1,0 +1,9 @@
+Prerprerequisites:
+    1)  need to install library (requests, beautifulsoup4,selenium).  Please follow directions for viertual enviroment
+        1)  Clone code into a local directory
+        2)  set up virtual enviroment with this command  
+                  python3 -m venv your_dir_name
+        3)  activate enviroment.
+                a) windows:  source ./dirname/Scripts/activate
+                b) linux:  source dirname/bin/activate
+        4)  pip3 install -r requirements.txt   -- this will install  into your virtual directory.  
