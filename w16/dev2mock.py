@@ -12,43 +12,26 @@ rootwindow = Tk()
 rootwindow.title("File 2 Json ")
 
 #maximize window on start up
-w, h = rootwindow.winfo_screenwidth(), rootwindow.winfo_screenheight()
-rootwindow.geometry("%dx%d+0+0" % (w, h))
+rootwindow.geometry("500x600")
 
 
-#set up frames for each part
-status_frame = LabelFrame(rootwindow,text = "Status ")
-
-status_frame.grid(row=0,column =0,rowspan=1,sticky=W+E)
-status_frame.grid_columnconfigure(0,weight=1)
-status_frame.grid_rowconfigure(0, weight=1)
-
-status_entry =  Text(status_frame,height = 5, width = 52).grid(row=0,column=0, sticky=W+E)
-
-#set up frames for buttons, commands
-command_frame = LabelFrame(rootwindow,text = "Commands ",height = 15)
-
-command_frame.grid(row=1,column =0,rowspan=1,sticky=W+E)
-command_frame.grid_columnconfigure(1,weight=1)
-command_frame.grid_rowconfigure(1, weight=1)
-
-FileCnt= Label(command_frame,text = "Files Processed").grid(row=0,column=0)
-FilesBeingProcessed_entry =  Entry(command_frame).grid(row=0,column=1)
-
-RecCnt= Label(command_frame,text = "Records Processed").grid(row=2,column=0)
-NumberErrors =  Entry(command_frame).grid(row=2,column=1)
-
-ErrorCnt = Label(command_frame,text = "Errors Encountered ").grid(row=1,column=0)
-NumberRecsProcess =  Entry(command_frame).grid(row=1,column=1)
 
 
-Convertbutton = Button(command_frame,text = "Convert",height = 5,width=10,command=afunc).grid(row=3, column=0)
-SetConfigbutton = Button(command_frame,text = "Set Config",height = 5,width=10,command=afunc).grid(row=3, column=1)
-OpenLogButton = Button(command_frame,text = "Open Log",height = 5,width=10,command=afunc).grid(row=3, column=2)
+FileCnt= Label(rootwindow,text = "Files Processed").place(x=10,y=10,width=130,height=25)
+FilesBeingProcessed_entry =  Entry(rootwindow).place(x=150,y=10,width=160,height=25)
+
+RecCnt= Label(rootwindow,text = "Records Processed").place(x=10,y=30,width=130,height=25)
+NumberErrors =  Entry(rootwindow).place(x=150,y=30,width=160,height=25)
+
+ErrorCnt = Label(rootwindow,text = "Errors Encountered ").place(x=10,y=50,width=130,height=25)
+NumberRecsProcess =  Entry(rootwindow).place(x=150,y=50,width=160,height=25)
 
 
-w, h = rootwindow.winfo_screenwidth(), rootwindow.winfo_screenheight()
-rootwindow.geometry("%dx%d+0+0" % (w, h))
+Convertbutton = Button(rootwindow,text = "Convert",height = 5,width=10,pady=15,command=afunc).place(x=10,y=100,width=100,height=100)
+SetConfigbutton = Button(rootwindow,text = "Set Config",height = 5,width=10,pady=15,command=afunc).place(x=10,y=225,width=100,height=100)
+OpenLogButton = Button(rootwindow,text = "Open Log",height = 5,width=10,pady=15,command=afunc).place(x=10,y=350,width=100,height=100)
+PauseButton = Button(rootwindow,text = "Pause Processing",height = 5,width=10,pady=15,command=afunc).place(x=150,y=100,width=130,height=100)
+PauseButton = Button(rootwindow,text = "Stop Processing",height = 5,width=10,pady=15,command=afunc).place(x=150,y=225,width=130,height=100)
 
-rootwindow.grid_columnconfigure(0,weight=1)
+
 rootwindow.mainloop()
